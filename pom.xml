@@ -16,6 +16,7 @@
         <module>hr-payroll</module>
         <module>hr-worker</module>
         <module>hr-user</module>
+        <module>hr-auth</module>
     </modules>
 
     <properties>
