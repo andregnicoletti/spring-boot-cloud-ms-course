@@ -15,6 +15,7 @@
         <module>hr-gateway</module>
         <module>hr-payroll</module>
         <module>hr-worker</module>
+        <module>hr-user</module>
     </modules>
 
     <properties>
