@@ -70,7 +70,7 @@ A imagem abaixo representa a estrutura e a comunicação entre os serviços:
 
 1. **Clone o projeto**:
 ```bash
-git clone https://github.com/seu-usuario/ms-course.git
+git clone https://github.com/andregnicoletti/spring-boot-cloud-ms-course.git
 ```
 
 2. **Configure o Git remoto no `hr-config-server`** com seu repositório de configurações.
