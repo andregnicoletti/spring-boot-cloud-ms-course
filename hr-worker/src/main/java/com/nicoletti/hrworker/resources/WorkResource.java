@@ -1,20 +1,23 @@
 package com.nicoletti.hrworker.resources;
 
-import java.util.List;
-
+import com.nicoletti.hrworker.entities.Worker;
+import com.nicoletti.hrworker.repositories.WorkerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nicoletti.hrworker.entities.Worker;
-import com.nicoletti.hrworker.repositories.WorkerRepository;
+import java.util.List;
 
 @RestController
 @RequestMapping("/workers")
 public class WorkResource {
+
+	@Value("${test.config}")
+	private String testConfig;
 
 	@Autowired
 	private WorkerRepository repository;
@@ -31,5 +34,9 @@ public class WorkResource {
 		return ResponseEntity.ok(obj);
 	}
 
-
+	@GetMapping("/configs")
+	public ResponseEntity<Void> configs() {
+		System.out.println("CONFIG: " + testConfig);
+		return ResponseEntity.noContent().build();
+	}
 }
