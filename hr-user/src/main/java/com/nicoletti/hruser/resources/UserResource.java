@@ -6,12 +6,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/users")
-public class USerResource {
+public class UserResource {
 
     private final UserRepository userRepository;
 
